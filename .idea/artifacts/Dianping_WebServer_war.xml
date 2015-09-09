@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Dianping_WebServer:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="Dianping_WebServer.war">
+      <element id="artifact" artifact-name="Dianping_WebServer:war exploded" />
+    </root>
+  </artifact>
+</component>

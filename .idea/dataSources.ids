@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - android@localhost" uuid="6c11d057-efac-4cd9-82a1-deca7d93d96f">
+    <database-info product="MySQL" version="5.6.26" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="android"/>
+    <table name="category" schema="" catalog="android" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="category_name" sqlType="CHAR" precision="200" scale="0" nullable="false" jdbcType="1"/>
+      <column name="category_parent" sqlType="CHAR" precision="200" scale="0" nullable="true" jdbcType="1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="category_name" unique="true" columns="category_name"/>
+    </table>
+    <table name="city" schema="" catalog="android" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="city_name" sqlType="CHAR" precision="20" scale="0" nullable="false" jdbcType="1"/>
+      <column name="city_sortkey" sqlType="CHAR" precision="10" scale="0" nullable="false" jdbcType="1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="city_name" unique="true" columns="city_name"/>
+      <index name="id" unique="true" columns="id"/>
+    </table>
+    <table name="product" schema="" catalog="android" type="TABLE">
+      <column name="product_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="category_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="product_id"/>
+      <index name="product_id" unique="true" columns="product_id"/>
+    </table>
+  </data-source>
+</component>
