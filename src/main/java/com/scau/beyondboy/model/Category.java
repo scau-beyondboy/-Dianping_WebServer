@@ -11,7 +11,12 @@ public class Category
 {
     private int categoryId;
     private long categoryNumber;
-    public int getCategoryId()
+    public Category(int categoryId, long categoryNumber)
+    {
+        this.categoryId = categoryId;
+        this.categoryNumber = categoryNumber;
+    }
+        public int getCategoryId()
     {
         return categoryId;
     }

@@ -31,10 +31,13 @@
         <datasource-map>
           <unit-entry name="a.xml" value="6c11d057-efac-4cd9-82a1-deca7d93d96f" />
           <unit-entry name="hibernate.cfg.xml" value="6c11d057-efac-4cd9-82a1-deca7d93d96f" />
-          <unit-entry name="sessionFactory" />
+          <unit-entry name="sessionFactory" value="dataSource" />
           <unit-entry name="src:main:webapp:WEB-INF:hibernate:hibernate.cfg.xml" value="6c11d057-efac-4cd9-82a1-deca7d93d96f" />
         </datasource-map>
-        <naming-strategy-map />
+        <naming-strategy-map>
+          <unit-entry name="sessionFactory" />
+          <unit-entry name="src:main:webapp:WEB-INF:hibernate:hibernate.cfg.xml" />
+        </naming-strategy-map>
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/hibernate/hibernate.cfg.xml" />
       </configuration>
     </facet>

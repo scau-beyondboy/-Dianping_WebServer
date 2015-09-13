@@ -7,9 +7,6 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
     <context:annotation-config/>
     <mvc:annotation-driven/>
-    <!--<context:component-scan base-package="com.scau.beyondboy.controller"/>-->
-    <!--<context:component-scan base-package="com.scau.beyondboy.dao"/>-->
-    <!--<context:component-scan base-package="com.scau.beyondboy.model"/>-->
     <context:component-scan base-package="com.scau.beyondboy"/>
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/pages/"/>
@@ -40,5 +37,9 @@
         <constructor-arg ref="sessionFactory"/>
     </bean>
     <bean id="categoryServices" class="com.scau.beyondboy.services.impl.CategoryServicesImpl"/>
+    <bean id="productDao" class="com.scau.beyondboy.dao.impl.ProductDaoImpl">
+        <constructor-arg ref="sessionFactory"/>
+    </bean>
+    <bean id="productServices" class="com.scau.beyondboy.services.impl.ProductServicesImpl"/>
 
 </beans>

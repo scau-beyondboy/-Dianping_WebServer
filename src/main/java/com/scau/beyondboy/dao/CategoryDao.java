@@ -8,7 +8,6 @@ import java.util.List;
  * Time: 12:07
  */
 import com.scau.beyondboy.model.Category;
-import org.springframework.stereotype.Repository;
 public interface CategoryDao
 {
 

@@ -1,6 +1,5 @@
 package com.scau.beyondboy.controller;
 import com.scau.beyondboy.model.Category;
-import com.scau.beyondboy.model.CityEntity;
 import com.scau.beyondboy.services.CategoryServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -33,5 +32,11 @@ public class CategoryController
     public long getCategoryTotal()
     {
         return categoryServices.getCategoryTotal();
+    }
+    @RequestMapping(value = "/category",method = RequestMethod.GET)
+    @ResponseBody
+    public List<Category> getCategoryData()
+    {
+        return categoryServices.getCategoryData();
     }
 }

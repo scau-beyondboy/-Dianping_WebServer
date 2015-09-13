@@ -23,10 +23,40 @@
       <index name="id" unique="true" columns="id"/>
     </table>
     <table name="product" schema="" catalog="android" type="TABLE">
-      <column name="product_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="product_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MTAwMDA1"/>
       <column name="category_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="shop_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MTAwMDE="/>
+      <column name="sub_category_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="city_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="Nzg5NA=="/>
+      <column name="product_title" sqlType="VARCHAR" precision="400" scale="0" nullable="true" jdbcType="12"/>
+      <column name="product_sort_title" sqlType="VARCHAR" precision="400" scale="0" nullable="true" jdbcType="12"/>
+      <column name="product_image" sqlType="VARCHAR" precision="400" scale="0" nullable="true" jdbcType="12"/>
+      <column name="product_start_time" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12" def="JzA477yaMzAn"/>
+      <column name="product_value" sqlType="VARCHAR" precision="400" scale="0" nullable="true" jdbcType="12"/>
+      <column name="product_price" sqlType="VARCHAR" precision="400" scale="0" nullable="true" jdbcType="12"/>
+      <column name="product_ribat" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12" def="JzAuOCc="/>
+      <column name="product_bought" sqlType="VARCHAR" precision="400" scale="0" nullable="true" jdbcType="12"/>
+      <column name="product_minquota" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="Mg=="/>
+      <column name="product_maxquota" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MjA="/>
+      <column name="product_post" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12" def="J25vJw=="/>
+      <column name="product_soldout" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12" def="J25vJw=="/>
+      <column name="product_tip" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="product_end_time" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MTM5ODc4NzE5OQ=="/>
+      <column name="product_detail" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12" def="J+asoui/juadpeWIsGJleW9uZGJveemrmOS7v+eahOWkp+S8l+eCueivhOi0reS5sOWVhuWTgSc="/>
       <primary-key name="PRIMARY" columns="product_id"/>
       <index name="product_id" unique="true" columns="product_id"/>
+    </table>
+    <table name="shop" schema="" catalog="android" type="TABLE">
+      <column name="shop_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="shop_name" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12" def="J+mZhuWFtOeyruayueW6lyc="/>
+      <column name="shop_tel" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MTEwMTQ1ODc="/>
+      <column name="shop_address" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12" def="J+WNjuWNl+WGnOS4muWkp+WtpuWNjuWxseWMuic="/>
+      <column name="shop_area" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="J+W5v+W3nic="/>
+      <column name="shop_open_time" sqlType="TIME" precision="8" scale="0" nullable="false" jdbcType="92" def="JzAwOjAwOjA2LjAwMDAwMCc="/>
+      <column name="shop_lon" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8" def="MTE5LjU0NTU0"/>
+      <column name="shop_lat" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8" def="MTE4LjU1NDk4"/>
+      <column name="shop_traffic_info" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="shop_id"/>
     </table>
   </data-source>
 </component>

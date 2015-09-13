@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import java.util.LinkedList;
 import java.util.List;
 /**
  * Author:beyondboy
@@ -28,5 +29,14 @@ public class CategoryServicesImpl implements CategoryServices
     public long getCategoryTotal()
     {
         return categoryDao.getCategoryTotal();
+    }
+    @Override
+    public List<Category> getCategoryData()
+    {
+        List<Category> categoryDataList=new LinkedList<Category>();
+        Category category=new Category(0,getCategoryTotal());
+        categoryDataList.add(category);
+        categoryDataList.addAll(getCategoryList());
+        return categoryDataList;
     }
 }

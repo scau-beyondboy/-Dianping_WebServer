@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
 /**
@@ -17,8 +18,8 @@ import java.util.Locale;
 @Repository
 public class CategoryDaoImpl implements CategoryDao
 {
-    public static final String COUNTHQL = "select categoryId,count(categoryId)  from ProductEntity group by categoryId order by categoryId";
-    public static final String TOTALHQL = "select sum(categoryId) from ProductEntity ";
+    public static final String COUNTHQL = "select new com.scau.beyondboy.model.Category(categoryId,count(categoryId)) from ProductEntity group by categoryId order by categoryId";
+    public static final String TOTALHQL = "select count(categoryId) from ProductEntity ";
     private SessionFactory sessionFactory;
     @Autowired
     public CategoryDaoImpl(SessionFactory sessionFactory)
@@ -29,7 +30,7 @@ public class CategoryDaoImpl implements CategoryDao
     @Override
     public List<Category> getCategoryList()
     {
-        return (List<Category>)sessionFactory.getCurrentSession().createQuery(COUNTHQL).list();
+        return sessionFactory.getCurrentSession().createQuery(COUNTHQL).list();
     }
     @Transactional
     @Override

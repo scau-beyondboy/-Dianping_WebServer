@@ -16,4 +16,5 @@ public interface CategoryServices
 
 	List<Category> getCategoryList();
 	long getCategoryTotal();
+	public List<Category> getCategoryData();
 }
