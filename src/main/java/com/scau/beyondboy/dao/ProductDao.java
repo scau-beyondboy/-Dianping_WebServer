@@ -22,4 +22,5 @@ public interface ProductDao
      */
     List<ProductEntity> getProductEntitybyLBS(int page,int size,String category,double lat,double lon,double minlat,double minlon,double maxlat,double maxlon);
     int getCountByLBS(String category,double lat,double lon,double minlat,double minlon,double maxlat,double maxlon);
+    List<ProductEntity> getTest();
 }

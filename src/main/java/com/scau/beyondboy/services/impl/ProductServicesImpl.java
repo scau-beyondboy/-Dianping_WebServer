@@ -2,6 +2,7 @@ package com.scau.beyondboy.services.impl;
 import com.scau.beyondboy.dao.ProductDao;
 import com.scau.beyondboy.model.ProductEntity;
 import com.scau.beyondboy.services.ProductServices;
+import com.scau.beyondboy.util.CommonUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -37,4 +38,18 @@ public class ProductServicesImpl implements ProductServices
     {
         return productDao.getCountByLBS(category,lat,lon,minlat,minlon,maxlat,maxlon);
     }
+
+    @Override
+    public List<ProductEntity> getNearProductEntitybyLBS(int page, int size, double  lat, double lon, int raidus, String category)
+    {
+        double[] around= CommonUtil.getAround(lat, lon, raidus);
+        return getProductEntitybyLBS(page,size,category,lat,lon,around[0], around[1], around[2], around[3]);
+    }
+    @Override
+    public List<ProductEntity> getTest()
+    {
+        return productDao.getTest();
+    }
+
+
 }

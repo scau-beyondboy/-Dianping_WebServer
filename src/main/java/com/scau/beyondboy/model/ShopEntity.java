@@ -16,7 +16,7 @@ public class ShopEntity
     private int shopTel;
     private String shopAddress;
     private String shopArea;
-    private Time shopOpenTime;
+    private String shopOpenTime;
     private double shopLon;
     private double shopLat;
     private String shopTrafficInfo;
@@ -72,11 +72,11 @@ public class ShopEntity
     }
     @Basic
     @Column(name = "shop_open_time")
-    public Time getShopOpenTime()
+    public String getShopOpenTime()
     {
         return shopOpenTime;
     }
-    public void setShopOpenTime(Time shopOpenTime)
+    public void setShopOpenTime(String shopOpenTime)
     {
         this.shopOpenTime = shopOpenTime;
     }

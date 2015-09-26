@@ -27,7 +27,7 @@ public class ProductEntity
     private String productPost;
     private String productSoldout;
     private String productTip;
-    private long productEndTime;
+    private String productEndTime;
     private String productDetail;
     private ShopEntity shop;
     @Id
@@ -222,11 +222,11 @@ public class ProductEntity
     }
     @Basic
     @Column(name = "product_end_time")
-    public long getProductEndTime()
+    public String getProductEndTime()
     {
         return productEndTime;
     }
-    public void setProductEndTime(long productEndTime)
+    public void setProductEndTime(String productEndTime)
     {
         this.productEndTime = productEndTime;
     }

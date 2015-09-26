@@ -1,5 +1,6 @@
 package com.scau.beyondboy.services;
 import com.scau.beyondboy.model.ProductEntity;
+import com.scau.beyondboy.util.CommonUtil;
 
 import java.util.List;
 /**
@@ -11,9 +12,9 @@ import java.util.List;
 public interface ProductServices
 {
     //根据城市id，分类id，当前的页码，每页中的容量获取商品集合信息
-    public List<ProductEntity> getList(String cityId,String catId,int page,int size);
+    List<ProductEntity> getList(String cityId, String catId, int page, int size);
 
-    public long getCount(String cityId,String categoryId);
+    long getCount(String cityId, String categoryId);
 
     /**
      * @param lat 精度
@@ -22,4 +23,6 @@ public interface ProductServices
      */
     List<ProductEntity> getProductEntitybyLBS(int page,int size,String category,double lat,double lon,double minlat,double minlon,double maxlat,double maxlon);
     int getCountByLBS(String category,double lat,double lon,double minlat,double minlon,double maxlat,double maxlon);
+    List<ProductEntity> getNearProductEntitybyLBS(int page, int size, double  lat, double lon, int raidus, String category);
+    List<ProductEntity> getTest();
 }
