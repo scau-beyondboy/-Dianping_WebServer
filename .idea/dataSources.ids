@@ -41,7 +41,7 @@
       <column name="product_post" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12" def="J25vJw=="/>
       <column name="product_soldout" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12" def="J25vJw=="/>
       <column name="product_tip" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
-      <column name="product_end_time" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MTM5ODc4NzE5OQ=="/>
+      <column name="product_end_time" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12" def="JzEzOTg3ODcxOTkn"/>
       <column name="product_detail" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
       <primary-key name="PRIMARY" columns="product_id"/>
       <index name="product_id" unique="true" columns="product_id"/>
@@ -57,6 +57,14 @@
       <column name="shop_lat" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8" def="MTE4LjU1NDk4"/>
       <column name="shop_traffic_info" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="shop_id"/>
+    </table>
+    <table name="user" schema="" catalog="android" type="TABLE">
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_name" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12"/>
+      <column name="user_login_pwd" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12"/>
+      <column name="user_pay_pwd" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12"/>
+      <column name="user_tel" sqlType="VARCHAR" precision="400" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="user_id"/>
     </table>
   </data-source>
 </component>

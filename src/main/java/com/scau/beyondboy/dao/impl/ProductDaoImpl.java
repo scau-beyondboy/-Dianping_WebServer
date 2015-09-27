@@ -112,7 +112,7 @@ public class ProductDaoImpl implements ProductDao
         {
             page = 1;
         }
-        List nearByList = sessionFactory.getCurrentSession().createSQLQuery(sql.toString()).list();
+        List nearByList = sessionFactory.getCurrentSession().createSQLQuery(sql.toString()).setFirstResult((page-1)*size).setMaxResults(size).list();
         List<ProductEntity> productEntityList = new LinkedList<ProductEntity>();
         for (int i = 0; i < nearByList.size(); i++)
         {

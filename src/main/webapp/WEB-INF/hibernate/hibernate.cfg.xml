@@ -10,5 +10,6 @@
       <mapping class="com.scau.beyondboy.model.CategoryEntity"/>
       <mapping class="com.scau.beyondboy.model.ProductEntity"/>
       <mapping class="com.scau.beyondboy.model.ShopEntity"/>
+      <mapping class="com.scau.beyondboy.model.UserEntity"/>
   </session-factory>
 </hibernate-configuration>

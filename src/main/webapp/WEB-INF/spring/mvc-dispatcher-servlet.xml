@@ -41,5 +41,8 @@
         <constructor-arg ref="sessionFactory"/>
     </bean>
     <bean id="productServices" class="com.scau.beyondboy.services.impl.ProductServicesImpl"/>
-
+    <bean id="userDao" class="com.scau.beyondboy.dao.impl.UserDaoImpl">
+        <constructor-arg ref="sessionFactory"/>
+    </bean>
+    <bean id="userServices" class="com.scau.beyondboy.services.impl.UserServicesImpl"/>
 </beans>
