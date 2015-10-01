@@ -11,5 +11,7 @@ import java.util.List;
 public interface UserDao
 {
     //登录的方法
-   List<UserEntity> login(String name,String pwd);
+   UserEntity login(String name,String pwd);
+   UserEntity register(String name,String pwd);
+   UserEntity social(String name,String pwd);
 }

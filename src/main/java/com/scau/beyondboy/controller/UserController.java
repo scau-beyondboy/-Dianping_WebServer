@@ -20,8 +20,8 @@ public class UserController
     UserServices userServices;
     @RequestMapping(value = "/user",method = RequestMethod.GET)
     @ResponseBody
-    public ResponseObject login(@RequestParam(value = "username")String username,@RequestParam(value = "password")String password,@RequestParam(value = "flag")String flag)
+    public ResponseObject user(@RequestParam(value = "username") String username, @RequestParam(value = "password") String password, @RequestParam(value = "flag") String flag)
     {
-        return userServices.login(username,password,flag);
+        return userServices.user(username, password, flag);
     }
 }

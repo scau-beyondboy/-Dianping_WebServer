@@ -10,5 +10,5 @@ import com.scau.beyondboy.model.UserEntity;
 public interface UserServices
 {
     //登录的方法
-    ResponseObject login(String name,String pwd,String flag);
+    ResponseObject user(String name, String pwd, String flag);
 }
